@@ -1,13 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Supermarket_Management_System</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="CategoryInMemoryRepository.cs~RF2634851c.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\CoreBusiness\CoreBusiness.csproj" />
-    <ProjectReference Include="..\Plugins.DataStore.InMemory\Plugins.DataStore.InMemory.csproj" />
     <ProjectReference Include="..\UseCases\UseCases.csproj" />
   </ItemGroup>
 
