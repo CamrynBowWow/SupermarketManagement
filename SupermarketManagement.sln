@@ -5,11 +5,11 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Supermarket Management System", "Supermarket Management System\Supermarket Management System.csproj", "{F152E8E4-1764-47CB-BA59-CAA28315D2A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UseCases", "UseCases\UseCases.csproj", "{959C657B-F861-41AD-BC29-EB044E2E6ED1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UseCases", "UseCases\UseCases.csproj", "{959C657B-F861-41AD-BC29-EB044E2E6ED1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreBusiness", "CoreBusiness\CoreBusiness.csproj", "{C0D1F6E2-14E6-43A6-9238-3B7E8033698C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreBusiness", "CoreBusiness\CoreBusiness.csproj", "{C0D1F6E2-14E6-43A6-9238-3B7E8033698C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugins.DataStore.InMemory", "Plugins.DataStore.InMemory\Plugins.DataStore.InMemory.csproj", "{41D1268B-904E-4B1E-A1C1-97DF79C79454}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plugins.DataStore.InMemory", "Plugins.DataStore.InMemory\Plugins.DataStore.InMemory.csproj", "{41D1268B-904E-4B1E-A1C1-97DF79C79454}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
