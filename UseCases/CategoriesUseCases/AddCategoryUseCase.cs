@@ -1,26 +1,26 @@
-﻿using System;
+﻿using CoreBusiness;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CoreBusiness;
 using UseCases.DataStorePluginInterfaces;
 using UseCases.UseCaseInterfaces;
 
-namespace UseCases
+namespace UseCases.CategoriesUseCases
 {
-    public class EditCategoryUseCase : IEditCategoryUseCase
+    public class AddCategoryUseCase : IAddCategoryUseCase
     {
         private readonly ICategoryRepository categoryRepository;
 
-        public EditCategoryUseCase(ICategoryRepository categoryRepository)
+        public AddCategoryUseCase(ICategoryRepository categoryRepository)
         {
             this.categoryRepository = categoryRepository;
         }
 
         public void Execute(Category category)
         {
-            categoryRepository.UpdateCategory(category);
+            categoryRepository.AddCategory(category);
         }
     }
 }

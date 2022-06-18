@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using CoreBusiness;
 using UseCases.DataStorePluginInterfaces;
 
-namespace UseCases
+namespace UseCases.CategoriesUseCases
 {
     public class ViewCategoriesUseCase : IViewCategoriesUseCase
     {
