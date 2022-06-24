@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CoreBusiness;
 using UseCases.DataStorePluginInterfaces;
 using UseCases.UseCaseInterfaces;
 
-namespace UseCases
+namespace UseCases.ProductsUseCases
 {
-    public class DeleteProductUseCase : IDeleteProductUseCase
+    public class GetProductByIdUseCase : IGetProductByIdUseCase
     {
         private readonly IProductRepository productRepository;
 
-        public DeleteProductUseCase(IProductRepository productRepository)
+        public GetProductByIdUseCase(IProductRepository productRepository)
         {
             this.productRepository = productRepository;
         }
 
-        public void Execute(int productId)
+        public Product Execute(int productId)
         {
-            productRepository.DeleteProduct(productId);
+            return productRepository.GetProductById(productId);
         }
     }
 }

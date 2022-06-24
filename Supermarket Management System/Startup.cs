@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using UseCases;
 using UseCases.CategoriesUseCases;
 using UseCases.DataStorePluginInterfaces;
+using UseCases.ProductsUseCases;
 using UseCases.UseCaseInterfaces;
 
 namespace Supermarket_Management_System
@@ -50,6 +51,8 @@ namespace Supermarket_Management_System
             services.AddTransient<IEditProductUseCase, EditProductUseCase>();
             services.AddTransient<IGetProductByIdUseCase, GetProductByIdUseCase>();
             services.AddTransient<IDeleteProductUseCase, DeleteProductUseCase>();
+            services.AddTransient<IViewProductsByCategoryId, ViewProductsByCategoryId>();
+            services.AddTransient<ISellProductUseCase, SellProductUseCase>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
