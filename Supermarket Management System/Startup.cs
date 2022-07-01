@@ -17,6 +17,7 @@ using UseCases;
 using UseCases.CategoriesUseCases;
 using UseCases.DataStorePluginInterfaces;
 using UseCases.ProductsUseCases;
+using UseCases.Transactions;
 using UseCases.UseCaseInterfaces;
 
 namespace Supermarket_Management_System
@@ -41,6 +42,12 @@ namespace Supermarket_Management_System
             services.AddDbContext<MarketContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+            });
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("AdminOnly", p => p.RequireClaim("Position", "Admin"));
+                options.AddPolicy("CashierOnly", p => p.RequireClaim("Position", "Cashier"));
             });
 
             //Dependency Injection for In-Memory Data Store
@@ -90,8 +97,12 @@ namespace Supermarket_Management_System
 
             app.UseRouting();
 
+            app.UseAuthentication();
+            app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapRazorPages();
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
             });
